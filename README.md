@@ -3,7 +3,7 @@
 
 1. Clone o repositório de forma recursiva:
     ```sh
-    git clone --recursive <URL_DO_REPOSITORIO>
+    git clone --recursive https://github.com/Miguel-C1/spotsat-processoseletivo.git
     ```
 
 2. Rode o comando:
