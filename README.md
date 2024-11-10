@@ -20,7 +20,7 @@
 
 5. Rode o comando:
     ```sh
-    docker-compose -f docker-compose-dev.yaml up -d
+    docker compose up -d
     ```
 
     - Ele irá baixar as imagens indicadas no docker-compose e irá armazená-las localmente. Vide aba "Imagens" do Docker Desktop.
@@ -28,7 +28,7 @@
 
 6. Se você receber algum erro de porta, isso significa que alguma das portas que um ou mais dos contêineres quer utilizar já está sendo utilizada pelo seu computador. Ex: mysql já usa o 3606. Pare o serviço do mysql e tente novamente:
     ```sh
-    docker-compose up -d
+    docker compose up -d
     ```
 
 7. Se você receber algum erro de subnet, você precisa apagar sua rede e refazer:
