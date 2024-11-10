@@ -1,0 +1,3 @@
+[submodule "backEnd"]
+	path = backEnd
+	url = https://github.com/Miguel-C1/spotsat-BackEnd.git
