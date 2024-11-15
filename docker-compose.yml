@@ -6,7 +6,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
-      - "5432:5432"
+      - "${POSTGRES_PORT}:${POSTGRES_PORT}"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
@@ -18,11 +18,12 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       JWT_SECRET: ${JWT_SECRET}
       JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET}
-      POSTGRES_HOST: db
-      POSTGRES_PORT: 5432
-      PORT: 3000
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      PORT: ${PORT}
+      ORIGIN: ${ORIGIN}
     ports:
-      - "3000:3000"
+      - ${PORT}:${PORT}
     depends_on:
       - db
 
@@ -31,7 +32,7 @@ services:
     ports:
       - "3001:3001"
     environment:
-      REACT_APP_API_URL: http://backend-spotsat-processoseletivo-1:3000
+      REACT_APP_API_URL: ${API_URL}
     depends_on:
       - api
 
